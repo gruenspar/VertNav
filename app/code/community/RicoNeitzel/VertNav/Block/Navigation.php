@@ -356,6 +356,7 @@ class RicoNeitzel_VertNav_Block_Navigation extends Mage_Catalog_Block_Navigation
 
         /* @var $category Mage_Catalog_Model_Category */
         $category = Mage::getModel('catalog/category');
+        $category->setStoreId(Mage::app()->getStore()->getId());
 
         /*
          * Set Category Object if Product is requested without category path in URI (top level request).
